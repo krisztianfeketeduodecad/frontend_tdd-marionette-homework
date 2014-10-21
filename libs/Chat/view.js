@@ -23,7 +23,7 @@ var Backbone = require('backbone'),
 
 			/**
 			 * Set the chat input's value to the given message.
-			 * @param message   The message what we want to set in.
+			 * @param {string} message   The message what we want to set in.
 			 */
 			setInputTextMessage : function(message) {
 				var textInput = Backbone.$(this.ui.textInput)[0];
@@ -32,24 +32,23 @@ var Backbone = require('backbone'),
 
 			/**
 			 * Add the valid input message into the chatbox.
-			 * @param event
 			 */
-			sendButtonClick : function(event) {
+			sendButtonClick : function() {
 				var textInput = Backbone.$(this.ui.textInput)[0],
 					chatBox = Backbone.$(this.ui.chatBox)[0];
 				if (this.validateMessage(textInput.value)) {
-						Backbone.$('<p>', {
-						 class: 'message',
-						 text: textInput.value
-					 }).appendTo(chatBox);
+					Backbone.$('<p>', {
+						class : 'message',
+						text  : textInput.value
+					}).appendTo(chatBox);
 					textInput.value = '';
 				}
 			},
 
 			/**
 			 * Validate the given message.
-			 * @param message       The message what we want to validate.
-			 * @returns {boolean}   Is it valid or not?
+			 * @param {string} message   The message what we want to validate.
+			 * @returns {boolean}        Is it valid or not?
 			 */
 			validateMessage : function(message) {
 				return (!!message && message.length <= 40);

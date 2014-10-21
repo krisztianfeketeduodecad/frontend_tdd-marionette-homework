@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/btamas/frontend_tdd.svg?branch=marionette_test)](https://travis-ci.org/btamas/frontend_tdd)
+[![Build Status](https://travis-ci.org/krisztianfeketeduodecad/frontend_tdd-marionette-homework.svg)](https://travis-ci.org/krisztianfeketeduodecad/frontend_tdd-marionette-homework)
 
 Frontend TDD with mocha
 ============
